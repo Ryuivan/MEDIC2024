@@ -7,12 +7,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ $title }} | UMN Medical Center</title>
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap"
@@ -25,6 +26,9 @@
     <style>
         * {
             font-family: 'Bitter', serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -33,19 +37,12 @@
     <div class="min-h-screen bg-gray-100">
         @include('layouts.navigation')
 
-        <!-- Page Heading -->
-        {{-- @if (isset($header))
-        <header class="bg-white shadow">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                {{ $header }}
-            </div>
-        </header>
-        @endif --}}
-
         <!-- Page Content -->
-        <main class="container mx-auto px-5 md:px-10 xl:px-20">
+        <main class="container mx-auto px-5 md:px-10 xl:px-20 min-h-screen">
             @yield('content')
         </main>
+
+        @include('layouts.footer')
     </div>
 </body>
 

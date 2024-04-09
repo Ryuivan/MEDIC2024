@@ -5,7 +5,7 @@
                 <figure class="flex justify-center">
                     <img src="{{ asset('assets/logo/logo.png') }}" alt="Logo Medic" class="h-28 w-auto">
                 </figure>
-                <div class="flex justify-center md:justify-start md:ml-7 space-x-5 my-2">
+                <div class="flex justify-center md:justify-start space-x-5 my-5">
                     {{-- IG --}}
                     <a href="https://www.instagram.com/umnmedicalcenter/" target="_blank">
                         <img src="{{ asset('assets/logo/instagram.png') }}" alt="Logo Instagram" class="w-7 h-7">
@@ -19,7 +19,7 @@
                         <img src="{{ asset('assets/logo/tiktok.png') }}" alt="Logo Tiktok" class="w-7 h-7">
                     </a>
                 </div>
-                <div class="flex md:ml-7 mt-3 items-center justify-center md:justify-start">
+                <div class="flex items-center justify-center -mt-2 md:justify-start">
                     <i class="fa-solid fa-phone"></i>
                     <p class="text-lg text-[#1F262F] ml-2 font-medium">Ext. 7000</p>
                 </div>
