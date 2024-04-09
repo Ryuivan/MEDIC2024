@@ -1,42 +1,99 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="m-0 p-0 ">
-    <div class="bg-white p-10">
-        <div class="m-0 p-0 flex">
-            <div class="flex-initial mx-10">
-                <img src="{{ asset('assets/about/test.png') }}" class="object-contain w-150"/>
-            </div>
-            <div class="flex-initial mx-10">
-                <img src="{{ asset('assets/about/test.png') }}" />
-            </div>
-            <div class="flex-initial mx-10">
-                <img src="{{ asset('assets/about/test.png') }}" />
-            </div>
+
+<div class="p-0 m-0 bg-lime-950 bg-cover">
+  <div class="text-slate-50 m-0 p-4 w-full h-full">
+    <div class="flex flex-wrap mb-4 items-center justify-between">
+      <div class="w-full">
+        <div class="flex justify-center mb-12">
+          <div class="bg-lime-950 px-4 py-6">
+            <h2 class="text-2xl font-bold text-slate-50">Logo dan filosofi</h2>
+          </div>
         </div>
-        <div class="">
-            <h1 class="text-xl py-10">UMN Medical Center</h1>
-            <p class="pb-10">UMN Medical Center merupakan Lembaga Semi Otonom di bawah pengawasan Badan Eksekutif Mahasiswa yang bergerak di bidang kesehatan. Mulai beroperasi sejak tahun 2014, dan telah resmi berdiri pada tahun 2015. UMN Medical Center kini sudah memasuki generasi kesepuluh, menunjukkan eksistensinya yang berkelanjutan dan dedikasinya dalam memberikan pelayanan kesehatan terbaik bagi civitas akademika Universitas Multimedia Nusantara. UMN Medical Center berorientasi pada pelayanan kesehatan dengan kewajiban untuk memberikan pertolongan pertama, obat-obatan, serta edukasi kepada seluruh civitas akademika Universitas Multimedia Nusantara melalui kampanye-kampanye interaktif dan seminar mengenai kesehatan. Selain memiliki kegiatan yang interaktif, UMN Medical Center juga belajar mengenai solidaritas dan kekeluargaan yang disertai dengan pengimplementasian nilai 5C, baik di dalam maupun di luar kampus.</p>
-        <div>
-    </div>
-    <div class="bg-black text-white m-0 p-8">
-        <div class="flex p-0">
-            <div class="p-4">
-                <h1 class="text-lg py-8">Visi</h1>
-                <p>Menjadikan UMN Medical Center sebagai unit sarana penolongan pertama di dalam kampus dengan menjunjung tinggi kekeluargaan dan budi luhur serta berintegritas dalam segala hal.</p>
+      </div>
+      <div class="md:flex md:flex-wrap md:-mx-4">
+        <div class="w-full md:w-1/2 md:px-4">
+          <div class="flex items-center my-10 mx-8">
+            <div class="w-auto mr-4">
+              <img
+                src="gambar1.jpg"
+                class="w-32 md:w-40 h-32 md:h-40 rounded-full border-2 border-green-500"
+              />
             </div>
-            <div class="p-4">
-                <h1 class="text-lg py-8">Misi</h1>
-                <ol class="list-decimal">
-                    <li>Memberikan penanganan dan pelayanan yang terbaik terhadap UMN Medical Center, baik untuk internal maupun eksternal Universitas Multimedia Nusantara.</li>
-                    <li>Membangun keterampilan kerja setiap anggota UMN Medical Center dalam segala aspek secara kolaboratif.</li>
-                    <li>Menyediakan dan memberikan edukasi mengenai kesehatan kepada pihak internal dan eksternal UMN Medical Center secara kreatif, inovatif, dan interaktif.</li>
-                    <li>Meningkatkan rasa kepekaan dan tanggung jawab setiap anggota UMN Medical Center dalam menjalankan kewajibannya.</li>
-                    <li>Menjadikan UMN Medical Center sebagai wadah pengembangan mahasiswa tidak hanya dari segi medis namun juga mengembangkan diri mahasiswa.</li>
-                    <li>Menjunjung tinggi keadilan baik terhadap pasien, sesama, serta diri sendiri.</li>
-                </ol> 
+            <div class="w-full">
+              <h2 class="text-xl font-bold mb-2 text-teal-300">
+                Sisi Terbuka pada Pertemuan Tanda Plus
+              </h2>
+              <p class="">
+                Melambangkan keterbukaan UMN Medical Center kepada siapapun.
+              </p>
             </div>
+          </div>
+          <div class="flex items-center my-10 mx-8">
+            <div class="w-auto mr-4 mb-4 md:mb-0 flex-shrink-0">
+              <img
+                src="gambar2.jpg"
+                class="w-32 md:w-40 h-32 md:h-40 rounded-full border-2 border-green-500"
+              />
+            </div>
+            <div class="w-full">
+              <h2 class="text-xl font-bold mb-2 text-teal-300">Warna Hijau</h2>
+              <p class="">Melambangkan kesegaran dari keharmonisan.</p>
+            </div>
+          </div>
+          <div class="flex items-center my-10 mx-8">
+            <div class="w-auto mr-4 mb-4 md:mb-0 flex-shrink-0">
+              <img
+                src="gambar3.jpg"
+                class="w-32 md:w-40 h-32 md:h-40 rounded-full border-2 border-green-500"
+              />
+            </div>
+            <div class="w-5/6">
+              <h2 class="text-xl font-bold mb-2 text-teal-300">
+                Bagian Melengkung pada Ujung Tanda Plus
+              </h2>
+              <p class="">Melambangkan fleksibilitas.</p>
+            </div>
+          </div>
         </div>
+        <div class="w-full md:w-1/2 md:px-4">
+          <div class="flex items-center my-10 mx-8">
+            <div class="w-auto mr-4 mb-4 md:mb-0 flex-shrink-0">
+              <img
+                src="gambar4.jpg"
+                class="w-32 md:w-40 h-32 md:h-40 rounded-full border-2 border-green-500"
+              />
+            </div>
+            <div class="w-5/6">
+              <h2 class="text-xl font-bold mb-2 text-teal-300">
+                Logo Universitas Multimedia Nusantara
+              </h2>
+              <p class="">
+                Melambangkan UMN Medical Center merupakan bagian dari
+                Universitas Multimedia Nusantara.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center my-10 mx-8">
+            <div class="w-auto mr-4 mb-4 md:mb-0 flex-shrink-0">
+              <img
+                src="gambar5.jpg"
+                class="w-32 md:w-40 h-32 md:h-40 rounded-full border-2 border-green-500"
+              />
+            </div>
+            <div class="w-5/6">
+              <h2 class="text-xl font-bold mb-2 text-teal-300">Tanda Plus Hijau</h2>
+              <p class="">
+                Melambangkan 4 fakultas yang ada di Universitas Multimedia
+                Nusantara yang berarti kerjasama dan solidaritas antar anggota.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
+
 @endsection
