@@ -43,9 +43,6 @@
         @endif --}}
 
         <!-- Page Content -->
-        <main class="container mx-auto px-5 md:px-10 xl:px-20">
-            @yield('content')
-        </main>
     </div>
 </body>
 
