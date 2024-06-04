@@ -8,13 +8,13 @@
       <div class="w-full">
         <div class="flex justify-center mb-12">
           <div class="bg-lime-950 px-4 py-6">
-            <h2 class="text-2xl font-bold text-slate-50">Logo dan filosofi</h2>
+            <h2 class="text-3xl font-bold text-slate-50">Logo dan filosofi</h2>
           </div>
         </div>
       </div>
       <div class="md:flex md:flex-wrap md:-mx-4">
         <div class="w-full md:w-1/2 md:px-4">
-          <div class="flex items-center my-10 mx-8">
+          <div class="flex items-center my-10 mx-2">
             <div class="w-auto mr-4">
               <img
                 src="gambar1.jpg"
@@ -30,7 +30,7 @@
               </p>
             </div>
           </div>
-          <div class="flex items-center my-10 mx-8">
+          <div class="flex items-center my-10 mx-2">
             <div class="w-auto mr-4 mb-4 md:mb-0 flex-shrink-0">
               <img
                 src="gambar2.jpg"
@@ -42,7 +42,7 @@
               <p class="">Melambangkan kesegaran dari keharmonisan.</p>
             </div>
           </div>
-          <div class="flex items-center my-10 mx-8">
+          <div class="flex items-center my-10 mx-2">
             <div class="w-auto mr-4 mb-4 md:mb-0 flex-shrink-0">
               <img
                 src="gambar3.jpg"
@@ -58,7 +58,7 @@
           </div>
         </div>
         <div class="w-full md:w-1/2 md:px-4">
-          <div class="flex items-center my-10 mx-8">
+          <div class="flex items-center my-10 mx-2">
             <div class="w-auto mr-4 mb-4 md:mb-0 flex-shrink-0">
               <img
                 src="gambar4.jpg"
@@ -75,7 +75,7 @@
               </p>
             </div>
           </div>
-          <div class="flex items-center my-10 mx-8">
+          <div class="flex items-center my-10 mx-2">
             <div class="w-auto mr-4 mb-4 md:mb-0 flex-shrink-0">
               <img
                 src="gambar5.jpg"
