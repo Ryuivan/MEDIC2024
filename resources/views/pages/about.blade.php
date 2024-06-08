@@ -12,8 +12,8 @@
           </div>
         </div>
       </div>
-      <div class="md:flex md:flex-wrap md:-mx-4">
-        <div class="w-full md:w-1/2 md:px-4">
+      <div class="lg:flex lg:flex-wrap lg:-mx-4">
+        <div class="w-full md:w-full md:px-4">
           <div class="flex items-center my-10 mx-2">
             <div class="w-auto mr-4">
               <img
@@ -57,7 +57,7 @@
             </div>
           </div>
         </div>
-        <div class="w-full md:w-1/2 md:px-4">
+        <div class="w-full md:w-full md:px-4">
           <div class="flex items-center my-10 mx-2">
             <div class="w-auto mr-4 mb-4 md:mb-0 flex-shrink-0">
               <img
