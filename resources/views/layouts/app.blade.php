@@ -34,11 +34,11 @@
 </head>
 
 <body class="font-sans antialiased">
-    <div class="min-h-screen bg-gray-100">
+    <div class="min-h-screen bg-gray-900">
         @include('layouts.navigation')
 
         <!-- Page Content -->
-        <main class="container mx-auto px-5 md:px-10 xl:px-20 min-h-screen">
+        <main class="mx-auto px-0 mx-0 min-h-screen ">
             @yield('content')
         </main>
 
