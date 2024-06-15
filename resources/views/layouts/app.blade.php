@@ -38,7 +38,7 @@
         @include('layouts.navigation')
 
         <!-- Page Content -->
-        <main class="container mx-auto px-5 md:px-10 xl:px-20 min-h-screen">
+        <main class="mx-auto px-0 md:px-0 xl:px-0 min-h-screen">
             @yield('content')
         </main>
 
