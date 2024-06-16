@@ -15,6 +15,12 @@ Route::get('/about', function () {
     ]);
 });
 
+Route::get('/proker', function () {
+    return view('pages.proker', [
+        'title' => 'proker'
+    ]);
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
