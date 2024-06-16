@@ -12,15 +12,15 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+        rel="stylesheet">
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+
     <!-- Scripts -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <style>
@@ -29,20 +29,6 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-        }
-
-        .background-login {
-            background-image: url("{{ asset('assets/background/login.jpg') }}");
-            background-size: cover;
-            background-position: center;
-            bcakground-repeat: no-repeat;
-        }
-
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
         }
     </style>
 </head>
