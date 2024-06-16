@@ -48,6 +48,12 @@ Route::middleware(['admin', 'auth'])->group(function () {
     })->name('dashboard');
 });
 
+Route::get('/proker', function () {
+    return view('pages.proker', [
+        'title' => 'proker'
+    ]);
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
