@@ -3,7 +3,7 @@
         <div class="md:flex justify-center md:justify-between">
             <div class="w-100 md:w-50">
                 <figure class="flex justify-center">
-                    <img src="{{ asset('assets/logo/logo.png') }}" alt="Logo Medic" class="h-28 w-auto">
+                    <img src="{{ asset('assets/logo/MedicGreen_highres.png') }}" alt="Logo Medic" class="h-20 w-auto">
                 </figure>
                 <div class="flex justify-center md:justify-start space-x-5 my-5">
                     {{-- IG --}}
@@ -28,7 +28,7 @@
                 <p class="font-bold text-lg">ADDRESS</p>
                 <p class="">Universitas Multimedia Nusantara</p>
                 <p>Jl. Scientia Boulevard, Curug Sangereng <br> Kec. Klp. Dua, Kab. Tangerang, Banten 15810</p>
-                <p class="my-2 font-bold text-md">Weekdays &nbsp;&nbsp;&nbsp;8.00 - 17.00 <br> Saturday
+                <p class="my-2 font-bold text-base">Weekdays &nbsp;&nbsp;&nbsp;8.00 - 17.00 <br> Saturday
                     &nbsp;&nbsp;&nbsp;8.00 - 11.00</p>
             </div>
         </div>
