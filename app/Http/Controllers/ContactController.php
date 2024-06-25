@@ -44,7 +44,7 @@ class ContactController extends Controller
             'title' => 'required',
             'event_name' => 'required',
             'description' => 'required',
-            'day' => 'required',
+            'date' => 'required|date|after:today',
             'start_time' => 'required',
             'end_time' => 'required|after:start_time',
             'location' => 'required',
@@ -58,7 +58,7 @@ class ContactController extends Controller
         }
 
         Contact::create($request->all());
-        return Redirect::route('contact.index')->with('success', 'Pengajuan telah diterima, harap segera konfirmasi ke LINE kami. Terima kasih.');
+        return redirect()->route('contact.index')->with('success', 'Pengajuan telah diterima, harap segera konfirmasi ke LINE kami. Terima kasih.');
     }
 
     /**

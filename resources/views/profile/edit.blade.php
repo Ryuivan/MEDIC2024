@@ -13,11 +13,11 @@
                 <h1 class="text-xl">Welcome, <span class="font-semibold">{{ Auth::user()->first_name }} {{ Auth::user()->last_name ?? '' }}</span>!</h1>
             </div>
 
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
+            {{-- <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <div class="max-w-xl">
                     @include('profile.partials.update-profile-information-form')
                 </div>
-            </div>
+            </div> --}}
 
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <div class="max-w-xl">

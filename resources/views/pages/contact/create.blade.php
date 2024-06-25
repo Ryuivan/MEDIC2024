@@ -5,6 +5,7 @@
 <div class="bg-[#739058] px-5 py-10">
     <form action="{{ route('contact.store') }}" method="POST" class="w-full max-w-3xl mx-auto">
         @csrf
+
         <div class="text-left mb-10">
             <h1 class="text-xl lg:text-2xl font-bold text-white">Form Pengajuan Jasa<br>Alat Kesehatan dan Medis</h1>
         </div>
@@ -48,14 +49,14 @@
                 <label
                     class="@error('type') border-red-500 @enderror flex justify-between items-center w-1/2 p-2 border text-sm lg:text-base bg-white has-[:checked]:bg-[#425C3F] has-[:checked]:text-white">
                     Alat kesehatan
-                    <input type="radio" name="type" value="Alat kesehatan" {{ old('type')==='Alat kesehatan' ? 'checked'
+                    <input type="radio" name="type" value="Alat kesehatan" {{ old('type') === 'Alat kesehatan' ? 'checked'
                         : '' }}>
                 </label>
 
                 <label
                     class="@error('type') border-red-500 @enderror flex justify-between items-center w-1/2 p-2 border text-sm lg:text-base bg-white has-[:checked]:bg-[#425C3F] has-[:checked]:text-white">
                     Medis
-                    <input type="radio" name="type" value="Medis" {{ old('type')==='Medis' ? 'checked' : '' }}>
+                    <input type="radio" name="type" value="Medis" {{ old('type') === 'Medis' ? 'checked' : '' }}>
                 </label>
             </div>
         </div>
@@ -153,14 +154,14 @@
         {{-- Tanggal Acara --}}
         <div class="sm:flex justify-between items-center gap-4 px-5 mb-6">
             <div class="sm:w-1/5 mb-1 sm:mb-0">
-                <label for="day" class="w-1/5 text-sm lg:text-base font-bold text-white">Tanggal Acara</label>
+                <label for="date" class="w-1/5 text-sm lg:text-base font-bold text-white">Tanggal Acara</label>
             </div>
             <div class="sm:w-4/5">
-                <input type="date" name="day" id="day"
+                <input type="date" name="date" id="date"
                     class="w-full p-2 border placeholder:text-sm placeholder:italic @error('day') border-red-500 @enderror placeholder:text-[#acb3bc]"
                     placeholder="" min="{{ \Carbon\Carbon::now()->addDays(7)->format('Y-m-d') }}"
-                    value="{{ old('day') }}">
-                @error('day')
+                    value="{{ old('date') }}">
+                @error('date')
                 <p class="text-red-500 text-xs mt-1">Pertanyaan ini perlu diisi dengan benar!</p>
                 @enderror
             </div>

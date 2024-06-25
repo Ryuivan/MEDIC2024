@@ -54,8 +54,8 @@
             </li>
             @if (Auth::user()->is_admin == 1)
             <li class="mb-1 group">
-                <a href="#"
-                    class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-400 hover:text-gray-100 rounded-md {{ $title == 'Akun' ? 'bg-gray-300 text-black' : 'text-gray-300'}}">
+                <a href="/akun"
+                    class="flex items-center py-2 px-4 hover:bg-gray-400 hover:text-gray-100 rounded-md {{ $title == 'Akun' ? 'bg-gray-300 text-black' : 'text-gray-300'}}">
                     <span class="text-sm">Akun</span>
                 </a>
             </li>
@@ -87,13 +87,14 @@
                     Overview
                     @elseif ($title == 'Pengajuan Jasa')
                     Pengajuan
+                    @elseif ($title == 'Akun')
+                    Akun
                     @elseif ($title)
                     <a href="/dashboard/pengajuan" class="text-gray-400 hover:text-gray-600 font-medium">Pengajuan</a>
                 <li class="text-gray-600 mr-2 font-medium">/</li>
                 {{ $title }}
-                @elseif ($title == 'Akun')
-                Akun
                 @endif
+
                 </li>
             </ul>
 
@@ -157,10 +158,15 @@
                                 class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Dashboard</a>
                         </li>
                         <li>
-                            <a href="/logout"
-                                class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
+                            <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                                class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
+                                Logout
+                            </a>
                         </li>
                     </ul>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </li>
             </ul>
         </div>
