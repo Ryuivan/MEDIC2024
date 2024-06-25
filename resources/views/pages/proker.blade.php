@@ -11,7 +11,7 @@
     </h1>
     <section class="self-center w-full max-w-[1310px] max-md:max-w-full">
       <div
-        class="grid grid-cols-1 gap-5 my-8 px-8 md:grid-cols-4 max-md:grid-cols-2 max-md:gap-5 max-md:px-2 h-full"
+        class="grid grid-cols-1 gap-5 my-12 px-8 md:grid-cols-4 max-md:grid-cols-2 max-md:gap-5 max-md:px-2 h-full"
       >
         <!-- block 1 -->
         <div
@@ -32,11 +32,6 @@
               </div>
             </div>
             <div class="mt-3">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c320a1b0411ecbe3880b62f1877f21db530284fffae0276f313a7eaf0c585527?apiKey=25748477bc014dd79dfb896b955120fd&"
-                alt=""
-                class="aspect-[0.26] fill-stone-300 w-[5px]"
-              />
               <div class="flex flex-col px-2 mt-2.5 align-center">
                 <h2
                   class="text-lg md:text-lg lg:text-xl xl:text-2xl font-bold text-center"
@@ -71,11 +66,6 @@
               </div>
             </div>
             <div class="mt-3">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c320a1b0411ecbe3880b62f1877f21db530284fffae0276f313a7eaf0c585527?apiKey=25748477bc014dd79dfb896b955120fd&"
-                alt=""
-                class="aspect-[0.26] fill-stone-300 w-[5px]"
-              />
               <div class="flex flex-col px-2 mt-2.5 align-center">
                 <h2
                   class="text-lg md:text-lg lg:text-xl xl:text-2xl font-bold text-center"
@@ -108,11 +98,6 @@
               </div>
             </div>
             <div class="mt-3">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/3cbd3991234f388eecc316cdd85462d370e925a87973b174e9d7e3df3f7cec93?apiKey=25748477bc014dd79dfb896b955120fd&"
-                alt=""
-                class="aspect-[0.26] fill-stone-300 w-[5px]"
-              />
               <div class="flex flex-col px-2 mt-2.5 align-center">
                 <h2
                   class="text-lg md:text-lg lg:text-xl xl:text-2xl font-bold text-center"
@@ -145,11 +130,6 @@
               </div>
             </div>
             <div class="mt-3">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/3cbd3991234f388eecc316cdd85462d370e925a87973b174e9d7e3df3f7cec93?apiKey=25748477bc014dd79dfb896b955120fd&"
-                alt=""
-                class="aspect-[0.26] fill-stone-300 w-[5px]"
-              />
               <div class="flex flex-col px-2 mt-2.5 align-center">
                 <h2
                   class="text-lg md:text-lg lg:text-xl xl:text-2xl font-bold text-center"
@@ -171,16 +151,16 @@
     class="flex flex-col items-center py-16 px-8 bg-teal-950 max-md:px-5 max-md:mt max-md:max-w-full"
   >
     <h2
-      class="text-2xl lg:text-3xl xl:text-4xl font-bold text-stone-300 mb-4 h-full items-center"
+      class="text-2xl lg:text-3xl xl:text-4xl font-bold text-stone-300 mb-4 h-16 items-center justify-center"
     >
       Program Kerja Unggulan
     </h2>
     <div class="self-stretch mt-2 max-md:max-w-full">
       <div
-        class="grid grid-cols-1 md:grid-cols-4 gap-5 max-md:grid-cols-2 max-md:gap-5 justify-center items-start"
+        class="grid grid-cols-1 md:grid-cols-3 gap-5 max-md:grid-cols-2 max-md:gap-5 justify-center items-start"
       >
         <!-- block 1 -->
-        <div class="flex flex-col w-full max-md:w-full px-4">
+        <div class="flex flex-col w-full max-md:w-full px-4 my-6 items-center items-center">
           <article
             class="flex flex-col justify-center text-2xl font-bold text-center text-stone-300 max-md:mt-10 w-full max-w-64"
           >
@@ -196,11 +176,6 @@
               </div>
             </div>
             <div class="flex gap-5 mt-9">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/b2211b0600f27fdc92a892a94d1e7cbb60c778f076cc64eb185dd4e02cc818d8?apiKey=25748477bc014dd79dfb896b955120fd&"
-                alt=""
-                class="shrink-0 my-auto aspect-[0.28] fill-stone-300 w-[5px]"
-              />
               <h3 class="flex-auto text-lg md:text-lg lg:text-xl xl:text-2xl">
                 Apresiasi
               </h3>
@@ -212,7 +187,7 @@
           </article>
         </div>
         <!-- block 2 -->
-        <div class="flex flex-col w-full max-md:w-full px-4">
+        <div class="flex flex-col w-full max-md:w-full px-4 my-6 items-center">
           <article
             class="flex flex-col justify-center text-2xl font-bold text-center text-stone-300 max-md:mt-10 w-full max-w-64"
           >
@@ -230,11 +205,6 @@
             <div
               class="flex gap-px mt-10 text-2xl font-bold whitespace-nowrap text-stone-300 max-md:mt-10"
             >
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c997ea2ce4567709533532002efd1908b2ab3a0a5babaeaad006686e97fce5b0?apiKey=25748477bc014dd79dfb896b955120fd&"
-                alt=""
-                class="shrink-0 my-auto aspect-[0.28] fill-stone-300 w-[5px]"
-              />
               <div class="flex flex-col w-full">
                 <h3
                   class="text-lg md:text-lg lg:text-xl xl:text-2xl self-center w-full"
@@ -253,7 +223,7 @@
           </article>
         </div>
         <!-- block 3 -->
-        <div class="flex flex-col w-full max-md:w-full px-4">
+        <div class="flex flex-col w-full max-md:w-full px-4 my-6 items-center">
           <article
             class="flex flex-col text-2xl font-bold text-center text-stone-300 max-md:mt-10 w-full max-w-64"
           >
@@ -269,11 +239,6 @@
               </div>
             </div>
             <div class="flex gap-4 items-start mt-3">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c997ea2ce4567709533532002efd1908b2ab3a0a5babaeaad006686e97fce5b0?apiKey=25748477bc014dd79dfb896b955120fd&"
-                alt=""
-                class="shrink-0 my-4 aspect-[0.28] fill-stone-300 w-[5px]"
-              />
               <div class="flex flex-col mt-2 text-left">
                 <h3
                   class="text-lg md:text-lg lg:text-xl xl:text-2xl font-bold text-cyan-200"
@@ -292,8 +257,8 @@
             </div>
           </article>
         </div>
-        <!-- block 4 -->
-        <div class="flex flex-col w-full max-md:w-full px-4">
+      <!-- block 4 -->
+      <div class="flex flex-col w-full max-md:w-full px-4 my-6 items-center">
           <article
             class="flex flex-col text-2xl font-bold text-center text-stone-300 max-md:mt-10 w-full max-w-64"
           >
@@ -309,11 +274,6 @@
               </div>
             </div>
             <div class="flex gap-4 items-start mt-6">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c997ea2ce4567709533532002efd1908b2ab3a0a5babaeaad006686e97fce5b0?apiKey=25748477bc014dd79dfb896b955120fd&"
-                alt=""
-                class="shrink-0 my-auto aspect-[0.28] fill-stone-300 w-[5px]"
-              />
               <div class="flex flex-col mt-2 w-full">
                 <h3
                   class="text-lg md:text-lg lg:text-xl xl:text-2xl font-bold text-cyan-200"
@@ -328,15 +288,8 @@
             </div>
           </article>
         </div>
-      </div>
-    </div>
-    <!-- baris 2 -->
-    <div class="self-stretch mt-12 max-md:max-w-full">
-      <div
-        class="grid grid-cols-1 md:grid-cols-4 gap-5 max-md:grid-cols-2 max-md:gap-5 justify-center items-start"
-      >
         <div
-          class="flex flex-col w-full max-md:w-full px-4 md:col-start-2 md:col-span-1"
+          class="flex flex-col w-full max-md:w-full px-4 my-6 items-center md:col-start-2 md:col-span-1"
         >
           <article
             class="flex flex-col text-2xl font-bold text-center text-stone-300 max-md:mt-10 w-full max-w-64"
@@ -353,11 +306,6 @@
               </div>
             </div>
             <div class="flex gap-4 items-start mt-6">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c997ea2ce4567709533532002efd1908b2ab3a0a5babaeaad006686e97fce5b0?apiKey=25748477bc014dd79dfb896b955120fd&"
-                alt=""
-                class="shrink-0 my-8 aspect-[0.28] fill-stone-300 w-[5px]"
-              />
               <div class="flex flex-col mt-2 w-full">
                 <h3
                   class="text-lg md:text-lg lg:text-xl xl:text-2xl font-bold text-cyan-200 max-w-[240px] break-words"
@@ -372,7 +320,7 @@
             </div>
           </article>
         </div>
-        <div class="flex flex-col w-full max-md:w-full px-4">
+        <div class="flex flex-col w-full max-md:w-full px-4 my-6 items-center">
           <article
             class="flex flex-col text-2xl font-bold text-center text-stone-300 max-md:mt-10 w-full max-w-64"
           >
@@ -388,11 +336,6 @@
               </div>
             </div>
             <div class="flex gap-4 items-start mt-6">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c997ea2ce4567709533532002efd1908b2ab3a0a5babaeaad006686e97fce5b0?apiKey=25748477bc014dd79dfb896b955120fd&"
-                alt=""
-                class="shrink-0 my-auto aspect-[0.28] fill-stone-300 w-[5px]"
-              />
               <div class="flex flex-col mt-2 w-full">
                 <h3
                   class="text-lg md:text-lg lg:text-xl xl:text-2xl font-bold text-cyan-200 max-w-[240px] break-words"
