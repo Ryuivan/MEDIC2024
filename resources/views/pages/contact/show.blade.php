@@ -86,7 +86,7 @@
                                         }}</span>
                                 </td>
                                 <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <span class="text-[13px] font-medium text-gray-400">{{ $pending->type }}</span>
+                                    <span class="text-[13px] font-medium text-gray-400">{{ $pending->type == 'Alat kesehatan' ? 'Alkes' : "Medis" }}</span>
                                 </td>
                                 <td class="py-2 px-4 border-b border-b-gray-50">
                                     <span class="text-[13px] font-medium text-gray-400">{{

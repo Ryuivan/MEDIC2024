@@ -4,17 +4,16 @@
 
 <div class="bg-[#739058] px-5 py-10">
     <div class="w-full max-w-3xl mx-auto">
-
         @if (session()->has('success'))
-        <div class="flex items-center p-4 mb-4 text-blue-800 border border-blue-300 rounded-lg bg-[#ebf5ff]" role="alert">
+        <div class="flex items-center p-4 mb-4 text-blue-800 border border-blue-300 rounded-lg bg-[#ebf5ff]"
+            role="alert">
             <svg class="flex-shrink-0 inline w-4 h-4 lg:w-5 lg:h-5 me-3" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                 <path
                     d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
             </svg>
-            <span class="sr-only">Info</span>
-            <div class="text-sm lg:text-base">
-                <p class="font-medium"><span class="font-semibold">Info!<br></span>{{ session()->get('success') }}</p>
+            <div class="text-sm">
+                <p class="font-medium">{{ session()->get('success') }}x</p>
             </div>
         </div>
         @endif

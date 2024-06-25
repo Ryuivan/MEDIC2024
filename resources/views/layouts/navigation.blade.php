@@ -76,7 +76,7 @@
                     <form action="/logout" method="post"
                         class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">
                         @csrf
-                        <button type="submit">Sign Out</button>
+                        <button type="submit">Logout</button>
                     </form>
                 </div>
             </div>
