@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+@extends('layouts.app') @section('content')
 
 <div class="flex flex-col justify-center py-0">
   <div
@@ -63,36 +61,39 @@
                 <img
                   src="{{ asset('assets/proker/Piket.png') }}"
                   alt="Piket Icon"
-                  class="max-w-full aspect-[1.02] fill-stone-300 w-[229px]"
+                  class="w-2/4 md:w-[5rem] lg:w-[8rem]"
                 />
               </div>
             </div>
             <div class="mt-3">
               <div class="flex flex-col px-2 mt-2.5 align-center">
                 <h2
-                  class="mt-2 ml-7 text-2xl font-bold text-gray-800 max-md:ml-2.5"
+                  class="text-lg md:text-lg lg:text-xl xl:text-2xl font-bold text-center"
                 >
                   Piket
                 </h2>
-                <div
-                  class="shrink-0 self-stretch mt-2.5 h-px bg-white"
-                  aria-hidden="true"
-                ></div>
-                <p
-                  class="mt-2.5 text-base text-center text-black max-md:mr-2.5"
-                >
-                  Senin-Jumat (08.00-17.00)<br />
-                  Sabtu (08.00-11.00)
+                <p class="text-sm md:text-base lg:text-lg xl:text-xl mt-4 text-base text-center">
+                  Senin-Jumat (08.00-17.00)<br />Sabtu (08.00-11.00)
                 </p>
-              </article>
+              </div>
             </div>
-            <!-- block 3 -->
-            <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-              <article class="flex flex-col grow text-gray-800 max-md:mt-10">
+          </article>
+        </div>
+        <!-- block 3 -->
+        <div
+          class="flex flex-col w-full max-md:w-full items-center justify-center px-4"
+        >
+          <article
+            class="flex flex-col grow items-center w-full justify-start max-md:mt-10"
+          >
+            <div class="flex items-center justify-center w-full h-auto">
+              <div
+                class="rounded-full bg-[#D5DECD] flex justify-center items-center w-[min(100%,219px)] aspect-square"
+              >
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/06f8fccbf65a70de905c2983cd9e7e89946b1cc7d5e436cbe2ae4ed27dd99cfd?apiKey=25748477bc014dd79dfb896b955120fd&"
-                  alt="Rapat Icon"
-                  class="max-w-full aspect-[1.02] fill-stone-300 w-[229px]"
+                  src="{{ asset('assets/proker/Meeting.png') }}"
+                  alt="Meeting Icon"
+                  class="w-2/4 md:w-[5rem] lg:w-[8rem]"
                 />
               </div>
             </div>
@@ -122,9 +123,9 @@
                 class="rounded-full bg-[#D5DECD] flex justify-center items-center w-[min(100%,219px)] aspect-square"
               >
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/337f2abf32822f368eda89863a848e5d7eeb8200a2753aae33e962b0329bdf38?apiKey=25748477bc014dd79dfb896b955120fd&"
+                  src="{{ asset('assets/proker/Pengajuan jasa.png') }}"
                   alt="Pengajuan Jasa Icon"
-                  class="max-w-full aspect-[1.02] fill-stone-300 w-[229px]"
+                  class="w-2/4 md:w-[5rem] lg:w-[8rem]"
                 />
               </div>
             </div>
