@@ -5,7 +5,7 @@
     class="flex flex-col px-0 w-full md:h-[38rem] h-auto items-center bg-white max-md:max-w-full"
   >
     <h1
-      class="self-center flex align-center items-center justify-center h-28 text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800"
+      class="self-center flex align-center items-end justify-center h-28 text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800"
     >
       Program Kerja Rutin
     </h1>
