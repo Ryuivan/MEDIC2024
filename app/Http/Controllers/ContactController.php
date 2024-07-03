@@ -58,7 +58,7 @@ class ContactController extends Controller
         }
 
         Contact::create($request->all());
-        return redirect()->route('contact.index')->with('success', 'Pengajuan telah diterima, harap segera konfirmasi ke LINE kami. Terima kasih.');
+        return redirect()->route('contact.index')->with('status', 'Pengajuan telah diterima, harap segera konfirmasi ke LINE kami. Terima kasih.');
     }
 
     /**
@@ -72,7 +72,7 @@ class ContactController extends Controller
         $canceleds = Contact::where('status', 'Canceled')->orderByDesc('updated_at')->paginate(10);
 
         return view('pages.contact.show', [
-            'title' => 'Pengajuan Jasa',
+            'title' => 'Services',
             'notification' => Contact::where('status', 'Pending')->get(),
             'pendings' => $pendings,
             'onprogresses' => $onprogresses,
@@ -103,7 +103,7 @@ class ContactController extends Controller
 
         $contact->update($request->all());
 
-        return redirect()->route('contact.show', $contact->id)->with('success', 'Status berhasil diupdate!');
+        return redirect()->route('contact.show', $contact->id)->with('status', $contact->event_name . ' has been updated');
     }
 
     /**

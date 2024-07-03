@@ -10,12 +10,13 @@
             <p class="text-center text-lg text-gray-700">{!! $quote !!}</p>
         </div>
     </div>
-    <div class="bg-white border border-gray-100 shadow-md shadow-black/5 p-6 rounded-md">
+    
+    <div class="bg-white border border-gray-100 shadow-md shadow-black/5 p-6 rounded-md min-h-[300px]">
         @if ($pengajuans->isEmpty())
-        <p class="text-center py-4">Belum ada pengajuan, kocak!</p>
+        <p class="text-center py-4">No Submission</p>
         @else
-        <div class="flex justify-between mb-4 items-start">
-            <a href="/dashboard/pengajuan" class="font-medium hover:underline">Atur Pengajuan</a>
+        <div class="flex justify-end mb-4 items-start">
+            <a href="{{ route('contact.show') }}" class="font-medium hover:underline">Manage Submissions <i class="ri-external-link-line"></i></a>
         </div>
 
         <div class="overflow-x-auto">
@@ -27,19 +28,19 @@
                             No.</th>
                         <th
                             class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left rounded-tl-md rounded-bl-md">
-                            Nama Acara</th>
+                            Event Name</th>
                         <th
                             class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                            Organisasi</th>
+                            Organization</th>
                         <th
                             class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                            Tanggal Acara</th>
+                            Event Date</th>
                         <th
                             class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                            Tipe</th>
+                            Type</th>
                         <th
                             class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                            Tanggal Pengajuan</th>
+                            Submitted At</th>
                         <th
                             class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left rounded-tr-md rounded-br-md">
                             Status</th>
@@ -52,7 +53,7 @@
                             <span class="text-[13px] font-medium text-gray-400">{{ $loop->iteration }}</span>
                         </td>
                         <td class="py-2 px-4 border-b border-b-gray-50 hover:underline">
-                            <a href="/dashboard/pengajuan/{{ $pengajuan->id }}"
+                            <a href="{{ route('contact.edit', $pengajuan->id) }}"
                                 class="text-gray-600 text-sm font-medium">{{
                                 $pengajuan->event_name }}</a>
                         </td>

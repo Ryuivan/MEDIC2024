@@ -47,8 +47,6 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        Auth::login($user);
-
-        return redirect(route('profile.index', absolute: false))->with('status', 'Your account has been created.');
+        return redirect(route('profile.index', absolute: false))->with('status', 'New account has been created.');
     }
 }

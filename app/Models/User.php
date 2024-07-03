@@ -56,4 +56,9 @@ class User extends Authenticatable
     {
         return Carbon::parse($this->attributes['created_at'])->format('d-m-Y H:i');
     }
+
+    public function galleries()
+    {
+        return $this->hasMany(Gallery::class);
+    }
 }
