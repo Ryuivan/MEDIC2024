@@ -3,12 +3,12 @@
 @section('content')
 
 <div class="rounded-md border bg-white border-gray-100 m-6 px-0 sm:p-6 shadow-md shadow-black/5">
-    @if (session()->has('success'))
-    <div class="alert alert-success" role="alert">
-        {{ session()->get('success') }}
-    </div>
+
+    @if (session()->has('status'))
+    @include('components.status', ['status' => session('status')])
     @endif
-    <div class="mx-auto">
+
+    <div class="mx-auto min-h-[400px]">
         <div class="relative right-0 p-6">
             <ul class="w-2/3 mx-auto relative flex flex-wrap p-1 list-none rounded-xl bg-gray-200" data-tabs="tabs"
                 role="list">
@@ -48,19 +48,19 @@
                                     No.</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left rounded-tl-md rounded-bl-md">
-                                    Nama Acara</th>
+                                    Event Name</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Organisasi</th>
+                                    Organization</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Tanggal Acara</th>
+                                    Event Date</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Tipe</th>
+                                    Type</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Tanggal Pengajuan</th>
+                                    Submitted at</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left rounded-tr-md rounded-br-md">
                                     Status</th>
@@ -73,7 +73,7 @@
                                     <span class="text-[13px] font-medium text-gray-400">{{ $loop->iteration }}</span>
                                 </td>
                                 <td class="py-2 px-4 border-b border-b-gray-50 hover:underline">
-                                    <a href="/dashboard/pengajuan/{{ $pending->id }}"
+                                    <a href="{{ route('contact.edit', $pending->id) }}"
                                         class="text-gray-600 text-sm font-medium">{{
                                         $pending->event_name }}</a>
                                 </td>
@@ -107,13 +107,12 @@
 
                     @elseif ($pendings->isEmpty() && !$pendings->onFirstPage())
                     <div class="min-h-96 flex items-center justify-center">
-                        <p class="text-xl text-center">Data "pendings" pada halaman ke-{{ $pendings->currentPage() }}
-                            kosong</p>
+                        <p class="text-xl text-center">Data "pending" on page {{ $pendings->currentPage() }} is empty.</p>
                     </div>
 
                     @else
                     <div class="min-h-96 flex items-center justify-center">
-                        <p class="text-xl text-center">Data Kosong</p>
+                        <p class="text-xl text-center">Data is empty</p>
                     </div>
                     @endif
 
@@ -128,19 +127,19 @@
                                     No.</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left rounded-tl-md rounded-bl-md">
-                                    Nama Acara</th>
+                                    Event Name</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Organisasi</th>
+                                    Organization</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Tanggal Acara</th>
+                                    Event Date</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Tipe</th>
+                                    Type</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Tanggal Pengajuan</th>
+                                    Submitted At</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left rounded-tr-md rounded-br-md">
                                     Status</th>
@@ -153,7 +152,7 @@
                                     <span class="text-[13px] font-medium text-gray-400">{{ $loop->iteration }}</span>
                                 </td>
                                 <td class="py-2 px-4 border-b border-b-gray-50 hover:underline">
-                                    <a href="/dashboard/pengajuan/{{ $onprogress->id }}"
+                                    <a href="{{ route('contact.edit', $onprogress->id) }}"
                                         class="text-gray-600 text-sm font-medium">{{
                                         $onprogress->event_name }}</a>
                                 </td>
@@ -187,13 +186,13 @@
 
                     @elseif ($onprogresses->isEmpty() && !$onprogresses->onFirstPage())
                     <div class="min-h-96 flex items-center justify-center">
-                        <p class="text-xl text-center">Data "on progress" pada halaman ke-{{
-                            $onprogresses->currentPage() }} kosong</p>
+                        <p class="text-xl text-center">Data "on progress" on page {{ $pendings->currentPage() }} is empty.
+                        </p>
                     </div>
 
                     @else
                     <div class="min-h-96 flex items-center justify-center">
-                        <p class="text-xl text-center">Data Kosong</p>
+                        <p class="text-xl text-center">Data is empty</p>
                     </div>
                     @endif
 
@@ -208,19 +207,19 @@
                                     No.</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left rounded-tl-md rounded-bl-md">
-                                    Nama Acara</th>
+                                    Event Name</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Organisasi</th>
+                                    Organization</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Tanggal Acara</th>
+                                    Event Date</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Tipe</th>
+                                    Type</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Tanggal Pengajuan</th>
+                                    Submitted At</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left rounded-tr-md rounded-br-md">
                                     Status</th>
@@ -233,7 +232,7 @@
                                     <span class="text-[13px] font-medium text-gray-400">{{ $loop->iteration }}</span>
                                 </td>
                                 <td class="py-2 px-4 border-b border-b-gray-50 hover:underline">
-                                    <a href="/dashboard/pengajuan/{{ $completed->id }}"
+                                    <a href="{{ route('contact.edit', $completed->id) }}"
                                         class="text-gray-600 text-sm font-medium">{{
                                         $completed->event_name }}</a>
                                 </td>
@@ -267,13 +266,13 @@
 
                     @elseif ($completeds->isEmpty() && !$completeds->onFirstPage())
                     <div class="min-h-96 flex items-center justify-center">
-                        <p class="text-xl text-center">Data "completed" pada halaman ke-{{ $completeds->currentPage() }}
-                            kosong</p>
+                        <p class="text-xl text-center">Data "completed" on page {{ $pendings->currentPage() }} is empty.
+                        </p>
                     </div>
 
                     @else
                     <div class="min-h-96 flex items-center justify-center">
-                        <p class="text-xl text-center">Data Kosong</p>
+                        <p class="text-xl text-center">Data is empty</p>
                     </div>
                     @endif
 
@@ -288,19 +287,19 @@
                                     No.</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left rounded-tl-md rounded-bl-md">
-                                    Nama Acara</th>
+                                    Event Name</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Organisasi</th>
+                                    Organization</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Tanggal Acara</th>
+                                    Event Date</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Tipe</th>
+                                    Type</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                    Tanggal Pengajuan</th>
+                                    Submitted At</th>
                                 <th
                                     class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left rounded-tr-md rounded-br-md">
                                     Status</th>
@@ -313,7 +312,7 @@
                                     <span class="text-[13px] font-medium text-gray-400">{{ $loop->iteration }}</span>
                                 </td>
                                 <td class="py-2 px-4 border-b border-b-gray-50 hover:underline">
-                                    <a href="/dashboard/pengajuan/{{ $canceled->id }}"
+                                    <a href="{{ route('contact.edit', $canceled->id) }}"
                                         class="text-gray-600 text-sm font-medium">{{ $canceled->event_name }}</a>
                                 </td>
                                 <td class="py-2 px-4 border-b border-b-gray-50">
@@ -344,13 +343,13 @@
 
                     @elseif ($canceleds->isEmpty() && !$canceleds->onFirstPage())
                     <div class="min-h-96 flex items-center justify-center">
-                        <p class="text-xl text-center">Data canceled pada halaman ke-{{ $canceleds->currentPage() }}
-                            kosong</p>
+                        <p class="text-xl text-center">Data "canceled" on page {{ $pendings->currentPage() }} is empty.
+                        </p>
                     </div>
 
                     @else
                     <div class="min-h-96 flex items-center justify-center">
-                        <p class="text-xl text-center">Data Kosong</p>
+                        <p class="text-xl text-center">Data is empty</p>
                     </div>
                     @endif
 
@@ -359,7 +358,5 @@
         </div>
     </div>
 </div>
-
-<script src="https://unpkg.com/@material-tailwind/html@latest/scripts/tabs.js"></script>
 
 @endsection

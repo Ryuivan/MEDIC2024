@@ -22,15 +22,39 @@
 
     <div class="mx-auto min-h-[400px]">
         <div class="relative right-0 p-6">
-            
+
             <div class="flex flex-col space-y-4 justify-center sm:space-y-0 sm:flex-row sm:justify-between mb-5">
-                <h1 class="text-2xl text-center sm:text-left font-semibold text-gray-800">Accounts</h1>
-                <a href="{{ route('register') }}"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Add</a>
+                <h1 class="text-2xl text-center sm:text-left font-semibold text-gray-800">Photo Categories</h1>
+                <button data-ripple-light="true" data-collapse-target="collapse"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                    Add
+                </button>
+            </div>
+
+            <div data-collapse="collapse"
+                class="block h-0 w-full basis-full overflow-hidden transition-all duration-300 ease-in-out mb-8">
+                <div class="relative my-4 flex mx-auto w-8/12 justify-center flex-col rounded-xl text-gray-700">
+                    <form class="leading-relaxed block max-w-md w-full mx-auto" action="{{ route('category.store') }}" method="POST">
+                        @csrf
+
+                        <div class="relative z-0 w-full mb-5 group">
+                            <input type="text" name="name" id="name"
+                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" " required />
+                            <label for="name"
+                                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Name</label>
+                        </div>
+
+                        <div class="flex justify-center">
+                            <button type="submit"
+                            class="text-white bg-[#415C3F] hover:bg-[#31492F] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
             <div class="block opacity-100 overflow-x-auto">
-                @if ($accounts->isNotEmpty())
+                @if ($categories->isNotEmpty())
                 <table class="w-full min-w-[540px]" data-tab-for="order" data-page="active">
                     <thead>
                         <tr>
@@ -39,70 +63,60 @@
                                 ID</th>
                             <th
                                 class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left rounded-tl-md rounded-bl-md">
-                                Email</th>
+                                Name</th>
                             <th
                                 class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                First Name</th>
+                                Slug</th>
                             <th
                                 class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                Last Name</th>
+                                Created At</th>
                             <th
                                 class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                Role</th>
-                            <th
-                                class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">
-                                Created at</th>
-                            <th
-                                class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left rounded-tr-md rounded-br-md">
-                                Updated at</th>
+                                Updated At</th>
                             <th
                                 class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left rounded-tr-md rounded-br-md">
                                 Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($accounts as $account)
+                        @foreach ($categories as $category)
                         <tr class="hover:bg-slate-300">
                             <td class="py-2 px-4 border-b border-b-gray-50">
-                                <span class="text-[13px] font-medium text-gray-400">{{ $account->id }}</span>
+                                <span class="text-[13px] font-medium text-gray-400">{{ $category->id }}</span>
                             </td>
                             <td class="py-2 px-4 border-b border-b-gray-50 hover:underline">
-                                <a href="{{ route('profile.edit_admin', $account->id) }}" class="text-gray-600 text-sm font-medium">{{
-                                    $account->email }}</a>
+                                <a href="{{ route('category.edit', $category->slug) }}"
+                                    class="text-gray-600 text-sm font-medium">{{
+                                    $category->name }}</a>
                             </td>
                             <td class="py-2 px-4 border-b border-b-gray-50">
-                                <span class="text-[13px] font-medium text-gray-400">{{ $account->first_name
+                                <span class="text-[13px] font-medium text-gray-400">{{ $category->slug
                                     }}</span>
                             </td>
                             <td class="py-2 px-4 border-b border-b-gray-50">
-                                <span class="text-[13px] font-medium text-gray-400">{{ $account->last_name
-                                    }}</span>
-                            </td>
-                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                <span class="text-[13px] font-medium text-gray-400">{{ $account->is_admin == 1 ? 'Admin'
-                                    : 'User' }}</span>
-                            </td>
-                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                <span class="text-[13px] font-medium text-gray-400">{{
-                                    $account->formatted_created_at
+                                <span class="text-[13px] font-medium text-gray-400">{{ $category->formatted_created_at
                                     }}</span>
                             </td>
                             <td class="py-2 px-4 border-b border-b-gray-50">
                                 <span class="text-[13px] font-medium text-gray-400">{{
-                                    $account->formatted_updated_at
+                                    $category->formatted_updated_at
                                     }}</span>
                             </td>
                             <td class="py-2 px-4 border-b border-b-gray-50">
-                                <form action="{{ route('profile.destroy_admin', $account->id) }}" method="POST">
+                                <form action="{{ route('category.destroy', $category->slug) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="text-red-600 text-sm font-medium">Delete</button>
                                 </form>
                         </tr>
                         @endforeach
-                    </tbody>    
+                    </tbody>
                 </table>
-                <div class="mt-5">{{ $accounts->links('vendor.pagination.tailwind') }}</div>
+                <div class="mt-5">{{ $categories->links('vendor.pagination.tailwind') }}</div>
+                @else
+                <div class="flex items-center justify-center h-96">
+                    <p class="text-gray-400 text-lg">Tidak ada kategori</p>
+                </div>
                 @endif
 
             </div>

@@ -16,7 +16,7 @@ class ProfileController extends Controller
     public function index() 
     {
         return view('profile.index', [
-            'title' => 'Akun',
+            'title' => 'Accounts',
             'notification' => Contact::where('status', 'Pending')->get(),
             'pendings' => Contact::where('status', 'Pending')->get(),  
             'accounts' => User::paginate(5)
@@ -38,7 +38,7 @@ class ProfileController extends Controller
     {
         return view('profile.edit_admin', [
             'user' => User::findOrFail($request->id),
-            'title' => $request->user()->first_name,
+            'title' => User::findOrFail($request->id)->first_name,
             'notification' => Contact::where('status', 'Pending')->get(),
             'pendings' => Contact::where('status', 'Pending')->get(),  
         ]);

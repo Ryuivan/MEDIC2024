@@ -87,7 +87,7 @@
         </div>
         <div class="flex justify-end">
             <button type="submit"
-                class="bg-blue-500 text-white font-medium py-2 px-4 rounded-lg hover:bg-blue-600">Update</button>
+                class="bg-blue-500 text-white font-medium py-2 px-4 rounded-lg hover:bg-blue-600">Save</button>
         </div>
     </form>
 </div>

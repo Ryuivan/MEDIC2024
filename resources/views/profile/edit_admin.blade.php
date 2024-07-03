@@ -2,8 +2,7 @@
 
 @section('content')
 
-
-<div class="min-h-[500px] bg-white rounded-md border border-gray-100 p-6 flex items-center">
+<div class="min-h-[500px] bg-white rounded-md p-6 flex items-center">
     <form class="max-w-md w-full mx-auto" action="{{ route('profile.update_admin', $user->id) }}" method="POST">
         @csrf
         @method('PUT')
@@ -35,17 +34,17 @@
         </div>
 
         <div class="relative z-0 w-full mb-5 group">
-                <select id="status" name="status"
-                    class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block py-1.5 px-2.5">
-                    <option value="0" @if ($user->is_admin == '0') selected @endif>User</option>
-                    <option value="1" @if ($user->is_admin == '1') selected @endif>Admin</option>
-                </select>
+            <select id="status" name="status"
+                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block py-1.5 px-2.5">
+                <option value="0" @if ($user->is_admin == '0') selected @endif>User</option>
+                <option value="1" @if ($user->is_admin == '1') selected @endif>Admin</option>
+            </select>
         </div>
 
-        
-
-        <button type="submit"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
+        <div class="flex justify-center">
+            <button type="submit"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Save</button>
+        </div>
     </form>
 </div>
 

@@ -16,11 +16,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <style>
@@ -44,20 +50,33 @@
             width: 100%;
             z-index: 1000;
         }
+
+        .bg-gallery {
+            background-image: url("{{ asset('assets/background/white_n_green.png') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 
 <body class="font-sans antialiased">
     <div class="min-h-screen">
-        @include('layouts.navigation')
+        @include('components.navigation')
 
         <!-- Page Content -->
         <main class="mx-auto px-0">
             @yield('content')
         </main>
 
-        @include('layouts.footer')
+        @include('components.footer')
     </div>
+
+    <script>
+        $(document).ready(function() {
+            $('[data-fancybox="gallery"]').fancybox();
+        });
+    </script>
 </body>
 
 </html>

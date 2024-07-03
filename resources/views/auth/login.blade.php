@@ -5,7 +5,7 @@
     <form method="POST" action="{{ route('login') }}" class="w-full lg:w-1/2 xxl:w-1/3">
         @csrf
         <div class="mb-4 text-center lg:text-left">
-            <h1 class="text-[60px] font-medium text-white">Log In</h1>
+            <h1 class="text-[60px] font-medium text-white">Login</h1>
         </div>
 
         <!-- Email Address -->
@@ -26,8 +26,8 @@
                 class="z-10 peer-focus:font-medium absolute text-md text-[#435c3c] md:text-gray-300 duration-300 transform -translate-y-8 scale-75 top-3 origin-[0] peer-focus:translate-x-0 peer-focus:start-0 rtl:peer-focus:-translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-4 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Password</label>
         </div>
 
-        <div class="flex items-center justify-center lg:justify-end mt-4">
-            <button type="submit" class="bg-[#849274] px-8 py-3 rounded-lg text-white">Log In</button>
+        <div class="flex items-center justify-center lg:justify-start mt-4">
+            <button type="submit" class="bg-[#849274] px-8 py-3 rounded-lg text-white">Login</button>
         </div>
     </form>
 </div>
