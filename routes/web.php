@@ -46,6 +46,12 @@ Route::get('/proker', function () {
     ]);
 })->name('proker');
 
+Route::get('/aboutReadMore', function () {
+    return view('pages.aboutReadMore', [
+        'title' => 'AboutReadMore'
+    ]);
+});
+
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 Route::get('/contact/form', [ContactController::class, 'create'])->name('contact.create');
 Route::post('/contact/form', [ContactController::class, 'store'])->name('contact.store');
