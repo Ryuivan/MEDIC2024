@@ -34,7 +34,7 @@
 
         <li class="mb-1 group">
             <a href="{{ route('gallery.index') }}"
-                class="flex items-center py-2 px-4 hover:bg-gray-400 hover:text-gray-100 rounded-md {{ Route::currentRouteName() == 'profile.index' ? 'bg-gray-300 text-black' : 'text-gray-300'}}">
+                class="flex items-center py-2 px-4 hover:bg-gray-400 hover:text-gray-100 rounded-md {{ Route::currentRouteName() == 'gallery.index' ? 'bg-gray-300 text-black' : 'text-gray-300'}}">
                 <span class="text-sm">Galleries</span>
             </a>
         </li>

@@ -112,7 +112,7 @@
 
                     @else
                     <div class="min-h-96 flex items-center justify-center">
-                        <p class="text-xl text-center">Data is empty</p>
+                        <p class="text-xl text-center">No submission</p>
                     </div>
                     @endif
 
@@ -192,7 +192,7 @@
 
                     @else
                     <div class="min-h-96 flex items-center justify-center">
-                        <p class="text-xl text-center">Data is empty</p>
+                        <p class="text-xl text-center">No submission</p>
                     </div>
                     @endif
 
@@ -272,7 +272,7 @@
 
                     @else
                     <div class="min-h-96 flex items-center justify-center">
-                        <p class="text-xl text-center">Data is empty</p>
+                        <p class="text-xl text-center">No submission</p>
                     </div>
                     @endif
 
@@ -349,7 +349,7 @@
 
                     @else
                     <div class="min-h-96 flex items-center justify-center">
-                        <p class="text-xl text-center">Data is empty</p>
+                        <p class="text-xl text-center">No submission</p>
                     </div>
                     @endif
 

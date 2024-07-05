@@ -1,4 +1,4 @@
-<nav class="px-4 lg:px-16 py-4 flex flex-no-wrap justify-between items-center bg-[#D5DECD] sticky">
+<nav class="px-4 lg:px-16 py-4 flex flex-no-wrap justify-between items-center bg-[#D5DECD] sticky z-50">
     <a class="leading-none" href="/">
         <img src="{{ asset('assets/logo/MedicGreen_highres.png') }}" alt="Logo Medic" class="h-12 w-auto">
     </a>
