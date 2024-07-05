@@ -9,19 +9,6 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Inspiring;
 use App\Models\Contact;
 
-// use App\Mail\MyTestMail;
-// use Illuminate\Support\Facades\Mail;
-// use App\Http\Controllers\Auth\RegisteredUserController;
-
-// Route::get('/send-email', function () {
-//     try {
-//         Mail::to('ryuivan04@gmail.com')->send(new MyTestMail());
-//         echo "Email has been sent";
-//     } catch (\Exception $e) {
-//         echo "Email not sent. Error: " . $e->getMessage();
-//     }
-// });
-
 Route::get('/', function () {
     return view('pages.home', [
         'title' => 'Home'
@@ -34,23 +21,80 @@ Route::get('/about', function () {
     ]);
 })->name('about');
 
-Route::get('/about/read-more', function() {
-    return view('pages.aboutReadMore', [
-        'title' => 'About'
-    ]);
-})->name('about.read-more');
-
 Route::get('/proker', function () {
+    $rutin = [
+        [
+            'img' => 'assets/proker/pelatihan.png',
+            'alt' => 'Pelatihan Icon',
+            'title' => 'Pelatihan',
+            'description' => 'Pelatihan untuk anggota UMN Medical Center.'
+        ],
+        [
+            'img' => 'assets/proker/Piket.png',
+            'alt' => 'Piket Icon',
+            'title' => 'Piket',
+            'description' => 'Senin-Jumat (08.00-17.00)<br />Sabtu (08.00-11.00)'
+        ],
+        [
+            'img' => 'assets/proker/Meeting.png',
+            'alt' => 'Meeting Icon',
+            'title' => 'Rapat',
+            'description' => 'Update dan evaluasi kinerja setiap anggota'
+        ],
+        [
+            'img' => 'assets/proker/Pengajuan jasa.png',
+            'alt' => 'Pengajuan Jasa Icon',
+            'title' => 'Pengajuan jasa',
+            'description' => 'Pengajuan jasa dari pihak UMN Medical Center'
+        ],
+    ];
+
+    $unggulan = [
+        [
+            'img' => 'assets/proker/Apresiasi.png',
+            'alt' => 'Apresiasi Icon',
+            'title' => 'Apresiasi',
+            'description' => 'Wujud terima kasih dan penghargaan bagi anggota UMN Medical Center',
+        ],
+        [
+            'img' => 'assets/proker/Identitas.png',
+            'alt' => 'Identitas Icon',
+            'title' => 'Identity',
+            'description' => 'Kartu tanda pengenal untuk anggota UMN Medical Center',
+        ],
+        [
+            'img' => 'assets/proker/alive.png',
+            'alt' => 'Alive Icon',
+            'title' => 'Alive',
+            'subtitle' => 'Skin Health',
+            'description' => 'Kegiatan tahunan yang membahas tentang kesehatan',
+        ],
+        [
+            'img' => 'assets/proker/Cek kesehatan.png',
+            'alt' => 'Cek Kesehatan Icon',
+            'title' => 'Cek Kesehatan',
+            'description' => 'Membuka kolaborasi dengan pihak eskternal untuk cek kesehatan',
+        ],
+        [
+            'img' => 'assets/proker/Pelatihan civitas umn.png',
+            'alt' => 'Pelatihan Medis Civitas UMN Icon',
+            'title' => 'Pelatihan Civitas UMN',
+            'description' => 'Pelatihan medis dan alat kesehatan untuk civitas UMN',
+        ],
+        [
+            'img' => 'assets/proker/Bonding.png',
+            'alt' => 'Bonding Icon',
+            'title' => 'Bonding',
+            'description' => 'Memperkuat tali kekeluargaan UMN Medical Center',
+        ],
+    ];
+
     return view('pages.proker', [
-        'title' => 'Program Kerja'
+        'title' => 'Program Kerja',
+        'rutin' => $rutin,
+        'unggulan' => $unggulan
     ]);
 })->name('proker');
-
-Route::get('/aboutReadMore', function () {
-    return view('pages.aboutReadMore', [
-        'title' => 'AboutReadMore'
-    ]);
-});
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 Route::get('/contact/form', [ContactController::class, 'create'])->name('contact.create');
@@ -83,7 +127,7 @@ Route::middleware('auth')->group(function () {
     })->name('dashboard');
 
     Route::get('/dashboard/services', [ContactController::class, 'show'])->name('contact.show');
-    Route::get('/dashboard/services/{id}', [ContactController::class, 'edit'])->name('contact.edit'); 
+    Route::get('/dashboard/services/{id}', [ContactController::class, 'edit'])->name('contact.edit');
     Route::put('/dashboard/services/{id}', [ContactController::class, 'update'])->name('contact.update');
     Route::delete('/dashboard/services/{id}', [ContactController::class, 'destroy'])->name('contact.destroy');
 

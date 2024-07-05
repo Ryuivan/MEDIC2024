@@ -19,14 +19,6 @@
         </div>
     </div>
 
-    <div class="bg-[#5E6D5A] h-64 text-white m-0 p-8 w-full flex flex-col justify-center align-center text-center">
-        <div class="justify-center align-center text-slate-50 mb-4">
-            <h2 class="text-break text-lg md:text-lg lg:text-xl xl:text-2xl font-semibold">Tagline Gen X</h2>
-        </div>
-        <div class="justify-center align-center text-slate-50">
-            <h2 class="text-break text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">"Care for Health, Care for Life"</h2>
-        </div>
-    </div>
 
     <div class="bg-[#253A35] p-10">
         <div class="flex align-center justify-center justify-between items-center h-48 relative -top-6">
