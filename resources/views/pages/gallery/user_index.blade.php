@@ -19,7 +19,7 @@
                 <div class="flex justify-between flex-wrap flex-row lg:justify-normal lg:flex-col">
                     @foreach ($categories as $category)
                     <a href="{{ route('gallery.user_show', $category->slug) }}"
-                        class="w-[170px] text-sm mx-1 lg:w-5/6 text-center text-white px-6 py-4 bg-[#849274] hover:bg-[#415c3f] transition-all duration-200 mb-8 shadow-md flex justify-center items-center">{{
+                        class="w-full sm:w-[170px] text-sm mx-1 lg:w-5/6 text-center text-white px-6 py-4 bg-[#849274] hover:bg-[#415c3f] transition-all duration-200 mb-8 shadow-md flex justify-center items-center">{{
                         $category->name }}
                     </a>
                     @endforeach

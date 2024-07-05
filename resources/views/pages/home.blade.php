@@ -35,13 +35,9 @@
       memberikan pelayanan kesehatan terbaik bagi civitas akademika
       Universitas Multimedia Nusantara.
     </p>
-    <div class="flex justify-center items-center w-full">
-      <button
-        class="rounded-full bg-green-950 text-slate-50 text-center p-4 transition duration-1000 ease-in-out hover:bg-green-800 hover:text-white hover:shadow-lg hover:transform hover:scale-105 hover:shadow-green-600 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl px-5 sm:px-5 md:px-6 lg:px-8 xl:px-10 py-3 sm:py-3 md:py-4 lg:py-5 xl:py-6">
-        <a href="/about">Read more</a>
-      </button>
-    </div>
+
   </div>
+
   <div
     class="circle flex sm:my-[1%] md:my-[10%] lg:my-14 md:mx-0 lg:mx-[4%] lg:w-[57%] xl:w-[50%] xl:ml-16 md:w-[57%] relative md:mb-0 pb-64 md:pb-0 justify-center md:justify-normal">
     <div
@@ -64,13 +60,13 @@
   <div
     class="visi flex flex-wrap flex-col flex-grow items-center pl-6 mb-8 mr-0 md:pl-10 md:flex-row md:justify-center md:items-center">
     <div
-      class="w-full order-1 relative flex justify-end z-50 lg:w-2/5 md:w-[50%] md:justify-center md:items-center md:mb-0">
+      class="w-full order-1 relative flex justify-end z-30 lg:w-2/5 md:w-[50%] md:justify-center md:items-center md:mb-0">
       <img src="{{ asset('assets/foto/pelantikan_1.jpg') }}"
         class="w-[80%] h-auto shadow-lg flex lg:w-full md:w-[90%] md:justify-center sm:w-[75%] justify-end"
         alt="visi image" />
     </div>
     <div
-      class="w-auto h-60 bg-green-950 flex flex-col flex-grow text-white p-4 pl-10 items-start order-2 relative -mt-28 -ml-12 z-0 justify-end pb-6 xl:h-60 lg:w-3/5 lg:h-60 lg:text-base lg:justify-start lg:p-8 md:w-2/5 md:h-3/6 md:p-7 md:-ml-10 md:z-50 md:m-0 sm:h-40 sm:-mt-20 sm:text-base">
+      class="w-auto h-60 bg-green-950 flex flex-col flex-grow text-white p-4 pl-10 items-start order-2 relative -mt-28 -ml-12 z-0 justify-end pb-6 xl:h-60 lg:w-3/5 lg:h-60 lg:text-base lg:justify-start lg:p-8 md:w-2/5 md:h-3/6 md:p-7 md:-ml-10 md:z-30 md:m-0 sm:h-40 sm:-mt-20 sm:text-base">
       <h3 class="text-2xl md:text-3xl font-bold">VISI</h3>
       <p class="text-sm text-justify mt-4 md:text-[16px] sm:text-sm">
         Menjadikan UMN Medical Center sebagai unit sarana penolongan
@@ -82,7 +78,7 @@
   <!-- MISI Section -->
   <div class="misi w-full flex flex-row relative justify-center items-center">
     <!-- wrapper -->
-    <div class="w-0 flex flex-row flex-grow order-1 z-50 items-start
+    <div class="w-0 flex flex-row flex-grow order-1 z-30 items-start
                   relative justify-start self-start
                   md:order-2 md:-ml-5 md:z-0
                   md:justify-center md:items-center md:w-1/3">
@@ -90,9 +86,9 @@
                     items-center justify-center hidden
                     xl:flex xl:h-[27rem]
                     lg:flex
-                    md:z-50 md:object-none md:order-2 md:-ml-8 md:h-[27rem] md:flex 
+                    md:z-30 md:object-none md:order-2 md:-ml-8 md:h-[27rem] md:flex 
                     "></div>
-      <div class="w-64 max-h-64 md:flex flex-grow relative mb-4 order-2 -ml-6 z-50
+      <div class="w-64 max-h-64 md:flex flex-grow relative mb-4 order-2 -ml-6 z-30
                     justify-start items-start hidden
                     md:mb-0 md:ml-0 md:-z-1 md:order-1 lg:w-64
                     md:justify-center md:items-center">
@@ -102,7 +98,7 @@
     </div>
     <!-- misi text -->
     <div
-      class="relative w-full h-auto md:h-[27rem] bg-green-950 text-white p-8 z-50 md:max-h-[27rem] lg:max-w-[70rem] md:max-w-[52rem]">
+      class="relative w-full h-auto md:h-[27rem] bg-green-950 text-white p-8 z-30 md:max-h-[27rem] lg:max-w-[70rem] md:max-w-[52rem]">
       <img class="w-48 h-auto shadow-lg float-left m-4 flex md:hidden lg:hidden xl:hidden"
         src="{{ asset('assets/foto/pelatihan_1.jpg') }}" alt="misi image" />
       <div class="text-sm">

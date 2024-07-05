@@ -17,13 +17,18 @@
                 class="z-10 peer-focus:font-medium absolute text-md text-[#435c3c] md:text-gray-300 duration-300 transform -translate-y-8 scale-75 top-3 origin-[0] peer-focus:translate-x-0 peer-focus:start-0 rtl:peer-focus:-translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-4 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">E-mail</label>
         </div>
 
-        <!-- Password -->   
+        <!-- Password -->
         <div class="relative z-0 w-full mb-6 group text-white">
             <input type="password" name="password" id="password"
                 class="block py-3 w-full text-sm text-white bg-[#9baa89] md:bg-[#576859] border-2 px-4 border-[#9baa89] md:border-[#576859] appearance-none focus:outline-none focus:ring-0 focus:border-white md:opacity-90 peer rounded-lg"
                 placeholder=" " />
             <label for="password"
                 class="z-10 peer-focus:font-medium absolute text-md text-[#435c3c] md:text-gray-300 duration-300 transform -translate-y-8 scale-75 top-3 origin-[0] peer-focus:translate-x-0 peer-focus:start-0 rtl:peer-focus:-translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-4 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Password</label>
+            @if ($errors->any())
+            <div class="text-red-500 text-xs">
+                {{ $errors->first() }}
+            </div>
+            @endif
         </div>
 
         <div class="flex items-center justify-center lg:justify-start mt-4">

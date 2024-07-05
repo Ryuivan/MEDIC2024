@@ -24,25 +24,25 @@ Route::get('/about', function () {
 Route::get('/proker', function () {
     $rutin = [
         [
-            'img' => 'assets/proker/pelatihan.png',
+            'img' => 'assets/proker/pelatihan.jpg',
             'alt' => 'Pelatihan Icon',
             'title' => 'Pelatihan',
             'description' => 'Pelatihan untuk anggota UMN Medical Center.'
         ],
         [
-            'img' => 'assets/proker/Piket.png',
+            'img' => 'assets/proker/Piket.jpg',
             'alt' => 'Piket Icon',
             'title' => 'Piket',
             'description' => 'Senin-Jumat (08.00-17.00)<br />Sabtu (08.00-11.00)'
         ],
         [
-            'img' => 'assets/proker/Meeting.png',
+            'img' => 'assets/proker/Meeting.jpg',
             'alt' => 'Meeting Icon',
             'title' => 'Rapat',
             'description' => 'Update dan evaluasi kinerja setiap anggota'
         ],
         [
-            'img' => 'assets/proker/Pengajuan jasa.png',
+            'img' => 'assets/proker/Pengajuan jasa.jpg',
             'alt' => 'Pengajuan Jasa Icon',
             'title' => 'Pengajuan jasa',
             'description' => 'Pengajuan jasa dari pihak UMN Medical Center'
@@ -51,38 +51,38 @@ Route::get('/proker', function () {
 
     $unggulan = [
         [
-            'img' => 'assets/proker/Apresiasi.png',
+            'img' => 'assets/proker/Apresiasi.jpg',
             'alt' => 'Apresiasi Icon',
             'title' => 'Apresiasi',
             'description' => 'Wujud terima kasih dan penghargaan bagi anggota UMN Medical Center',
         ],
         [
-            'img' => 'assets/proker/Identitas.png',
+            'img' => 'assets/proker/Identitas.jpg',
             'alt' => 'Identitas Icon',
             'title' => 'Identity',
             'description' => 'Kartu tanda pengenal untuk anggota UMN Medical Center',
         ],
         [
-            'img' => 'assets/proker/alive.png',
+            'img' => 'assets/proker/alive.jpg',
             'alt' => 'Alive Icon',
             'title' => 'Alive',
             'subtitle' => 'Skin Health',
             'description' => 'Kegiatan tahunan yang membahas tentang kesehatan',
         ],
         [
-            'img' => 'assets/proker/Cek kesehatan.png',
+            'img' => 'assets/proker/Cek kesehatan.jpg',
             'alt' => 'Cek Kesehatan Icon',
             'title' => 'Cek Kesehatan',
             'description' => 'Membuka kolaborasi dengan pihak eskternal untuk cek kesehatan',
         ],
         [
-            'img' => 'assets/proker/Pelatihan civitas umn.png',
+            'img' => 'assets/proker/Pelatihan civitas umn.jpg',
             'alt' => 'Pelatihan Medis Civitas UMN Icon',
             'title' => 'Pelatihan Civitas UMN',
             'description' => 'Pelatihan medis dan alat kesehatan untuk civitas UMN',
         ],
         [
-            'img' => 'assets/proker/Bonding.png',
+            'img' => 'assets/proker/Bonding.jpg',
             'alt' => 'Bonding Icon',
             'title' => 'Bonding',
             'description' => 'Memperkuat tali kekeluargaan UMN Medical Center',

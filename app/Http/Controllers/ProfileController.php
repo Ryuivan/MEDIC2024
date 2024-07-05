@@ -75,6 +75,10 @@ class ProfileController extends Controller
             'status' => ['required', 'boolean'],
         ]);
 
+        if ($user->email = 'ryu.ivan@student.umn.ac.id') {
+            return Redirect::route('profile.index')->with('status', 'Gblh edit!');
+        }
+
         $user->email = $request->input('email');
         $user->first_name = $request->input('first_name');
         $user->last_name = $request->input('last_name');
